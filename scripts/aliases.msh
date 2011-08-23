@@ -1,0 +1,49 @@
+# This file is part of cfg.msh by Martin Richard
+#            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+#                    Version 2, December 2004
+#
+# Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+#
+# Everyone is permitted to copy and distribute verbatim or modified
+# copies of this license document, and changing it is allowed as long
+# as the name is changed.
+#
+#            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+#   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+#
+#  0. You just DO WHAT THE FUCK YOU WANT TO.
+
+# aliases
+#   common shortcut and implicit options
+
+# Shortcuts for ls
+alias ls="ls --color"
+alias l="ls"
+alias la="ls -a"
+alias ll="ls -lh"
+alias lla="ls -lah"
+# pipe ls to less and keep colors
+lsl() {
+  ls $@ --color=always | less -R
+}
+lal() {
+  ls -a $@ --color=always | less -R
+}
+lll() {
+  ls -lh $@ --color=always | less -R
+}
+llal() {
+  ls -lah $@ --color=always | less -R
+}
+
+# grep
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+# pipe grep to less and keep colors
+grepl() {
+  grep $@ --color=always | less -R
+}
+
+# Gives the shell name
+alias shellname='ps --no-headers --format comm $$'
+alias is_root='test $UID -eq 0'
