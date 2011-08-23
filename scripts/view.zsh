@@ -19,13 +19,13 @@
 autoload -U colors && colors
 
 # Prompt look
-PS1="${fg[green]}%n${reset_color} %~${fg[yellow]}$(git_prompt_info) ${fg[red]}"
+PROMPT="%{$fg[green]%}%n%{$reset_color%} %~%{$fg[yellow]%}$(git_prompt_info) %{$fg[red]%}"
 
 if is_root
 then
- PS1="$PS1# "
+ PROMPT="$PROMPT# "
 else
- PS1="$PS1$ "
+ PROMPT="$PROMPT$ "
 fi
 
-PS1="$PS1${reset_color}"
+PROMPT="$PROMPT%{$reset_color%}"
