@@ -2,12 +2,15 @@ cfg.msh
 =======
 
 cfg.msh is a clean configuration set for Bash or Zsh.
-This work is highly inspired by Oh-My-Zsh features and design, but I choose to
+This work is highly inspired by Oh-My-Zsh features and design, but I choosed to
 write my configuration from scratch as an excercice, and in order to be focused
 on my own needs and avoid some bogus features with some terminals (and SSH).
 
 I will try to implement features that are compatible with Bash and Zsh as
 much as possible.
+
+A quick word about the name "msh", M stands for My, Multiple and Martius (a bit
+of Megalomania, hum?).
 
 Installation
 ------------
