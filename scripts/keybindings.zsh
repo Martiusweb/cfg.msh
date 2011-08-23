@@ -18,18 +18,39 @@
 
 # Basic keys
 #   Thanks to the Archlinux wiki
-bindkey "\e[1~" beginning-of-line
-bindkey "\e[4~" end-of-line
-bindkey "\e[7~" beginning-of-line
-bindkey "\e[8~" end-of-line
-bindkey "^[OH" beginning-of-line
-bindkey "^[OF" end-of-line
-bindkey "\e[H" beginning-of-line
-bindkey "\e[F" end-of-line
-bindkey "\e[2~" quoted-insert
-bindkey "\e[3~" delete-char
-bindkey "\e[Z" reverse-menu-complete # Shift+Tab
 
-# History without being aware of what have been typed
-#bindkey "\e[A" history-search-backward
-#bindkey "\e[B" history-search-forward
+# home/end of line in various environment
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
+bindkey '\e[7~' beginning-of-line
+bindkey '\e[8~' end-of-line
+bindkey '^[OH' beginning-of-line
+bindkey '^[OF' end-of-line
+bindkey '\e[H' beginning-of-line
+bindkey '\e[F' end-of-line
+
+# quoted-insert (Insert)
+bindkey '\e[2~' quoted-insert
+# Left and right arrow keys
+bindkey '^[[D' backward-char
+bindkey '^[[C' forward-char
+# Ctrl+left/right jump the word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
+# Del and backspace
+bindkey '^?' backward-delete-char
+bindkey '\e[3~' delete-char
+
+# Shift+Tab
+bindkey '\e[Z' reverse-menu-complete
+
+# History control
+# page up key = previous or next in history, but don't search
+bindkey '^[[5~' up-line-or-history
+# page down key
+bindkey '^[[6~' down-line-or-history
+# up key = search according to the begining of the typed command
+bindkey '^[[A' up-line-or-search
+# down key
+bindkey '^[[B' down-line-or-search

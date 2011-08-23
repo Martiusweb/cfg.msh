@@ -16,10 +16,22 @@
 # env
 #   Shell specific features
 
-# setup hystory
+# setup history
 export HISTFILE=~/.zsh_history
 export HISTSIZE=50000
 export SAVEHIST=50000
+
+# ignore duplicate commands in history
+setopt hist_ignore_dups
+# share command history data between terminals
+setopt share_history
+# Save each command's beginning timestamp and the duration
+setopt extended_history
+# append to history (enabled by share_history)
+#setopt inc_append_history
+# when a line is entered with history substitution, perform history substitution
+# and reload the line
+setopt hist_verify
 
 # Changing directory options
 # Directory stack is documented here, for newbies:

@@ -27,6 +27,40 @@ If you don't want to use that script, you can follow these steps :
 
 That's should be sufficient.
 
+Usage
+-----
+
+You should read the configuration files which are extensively documented. You
+must be interested in keybindings if you want to know actions implemented behind
+some keys.
+
+ * `bootstrap` sources the scripts in `scripts/`
+
+ * `scripts/*.msh` script are loaded first, then, according to the shell running the
+ script, it calls `scripts/*.bash` or `scripts/*.zsh`
+
+ * `scripts/aliases` contains common aliases
+ * `scripts/complete` autocompletion features
+ * `scripts/env` environement specific features (shell options, etc)
+ * `scripts/git` git helpers
+ * `scripts/keybindings` key bindings (for zsh)
+ * `scripts/view` display setup (prompt, etc)
+
+To do
+-----
+
+Most important additions are on top.
+
+ 1. Customize autocompletion style
+
+ 2. Since I use mostly Zsh, my configuration for bash is currently basic, but
+    I'll try to improve it soon.
+
+ 3. The setup script, with an optional minifier allowing to use only one `.*rc`
+    file.
+
+ 4. Oh-My-Zsh plugins autograbber (hum...)
+
 Authors
 -------
 Martin Richard <martius@martiusweb.net>
