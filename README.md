@@ -49,6 +49,10 @@ some keys.
  * `scripts/keybindings` key bindings (for zsh)
  * `scripts/view` display setup (prompt, etc)
 
+The shell detection feature (shellname alias) seems to be working under
+Gnu/Linux only, since it uses specific options. You can set yourself
+`MSH_SHELL='bash'` or `MSH_SHELL='zsh'` in `mshrc`.
+
 To do
 -----
 
