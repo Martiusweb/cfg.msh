@@ -16,4 +16,4 @@
 # view
 #   Display configuration
 
-eval `dircolors -b`
+eval `dircolors -b 2> /dev/null`

@@ -54,15 +54,18 @@ To do
 
 Most important additions are on top.
 
- 1. Customize autocompletion style
+ 1. Find a way to hide these ugly characters when I split terminator and the
+    last line displayed will be cut.
 
- 2. Since I use mostly Zsh, my configuration for bash is currently basic, but
+ 2. Customize autocompletion style
+
+ 3. Since I use mostly Zsh, my configuration for bash is currently basic, but
     I'll try to improve it soon.
 
- 3. The setup script, with an optional minifier allowing to use only one `.*rc`
+ 4. The setup script, with an optional minifier allowing to use only one `.*rc`
     file.
 
- 4. Oh-My-Zsh plugins autograbber (hum...)
+ 5. Oh-My-Zsh plugins autograbber (hum...)
 
 Authors
 -------
