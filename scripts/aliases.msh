@@ -17,7 +17,8 @@
 #   common shortcut and implicit options
 
 # Shortcuts for ls
-alias ls="ls --color"
+# color option is different under Linux and BSD
+ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
 alias l="ls"
 alias la="ls -a"
 alias ll="ls -lh"
