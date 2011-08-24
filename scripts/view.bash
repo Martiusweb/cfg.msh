@@ -25,7 +25,7 @@ fg[yellow]=$'\e['33m
 reset_color=$'\e['00m
 
 # Prompt look
-PS1="${fg[green]}\u${reset_color} \w${fg[yellow]}$(git_prompt_info) ${fg[red]}"
+PS1='${fg[green]}\u${reset_color} \w${fg[yellow]}$(git_prompt_info) ${fg[red]}'
 
 if is_root
 then

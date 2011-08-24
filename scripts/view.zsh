@@ -18,8 +18,11 @@
 
 autoload -U colors && colors
 
+# Evaluate prompt
+setopt prompt_subst
+
 # Prompt look
-PROMPT="%{$fg[green]%}%n%{$reset_color%} %~%{$fg[yellow]%}$(git_prompt_info) %{$fg[red]%}"
+PROMPT='%{$fg[green]%}%n%{$reset_color%} %~%{$fg[yellow]%}$(git_prompt_info) %{$fg[red]%}'
 
 if is_root
 then
