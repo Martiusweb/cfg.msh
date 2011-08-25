@@ -48,3 +48,4 @@ grepl() {
 # Gives the shell name
 alias shellname='ps --no-headers --format comm $$'
 alias is_root='test $UID -eq 0'
+alias o='xdg-open'
