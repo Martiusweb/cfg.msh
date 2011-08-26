@@ -31,8 +31,13 @@ setopt always_to_end
 # The following configuration is inherited from Oh-My-Zsh, since it's pretty
 # good, and I've no time yet to dig this part.
 
-# standard case unsensitive completion
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# Case sensitive by default
+if [ "x$MSH_CASE_UNSENSITIVE" = "xtrue" ]
+then
+  zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+else
+  zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+fi
 
 # allow approximate typing
 zstyle ':completion:*' completer _complete _match _approximate

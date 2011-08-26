@@ -17,6 +17,9 @@
 # Path to our configuration
 MSH_CFG_PATH=/home/martius/Code/cfg.msh
 
+# Uncomment for unsensitive case for autocompletion
+#MSH_CASE_UNSENSITIVE=true
+
 # Starts our configuration
 source $MSH_CFG_PATH/bootstrap
 
