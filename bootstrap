@@ -27,3 +27,5 @@ fi
 # Load scripts specific to current shell
 for script in $MSH_CFG_PATH/scripts/*.$MSH_SHELL; do source $script; done
 unset script
+
+PATH=$PATH:$MSH_CFG_PATH/bin
