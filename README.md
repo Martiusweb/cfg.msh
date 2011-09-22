@@ -17,6 +17,7 @@ Installation
 There is a script called setup that you can run, I shall do the job for you.
 
 If you don't want to use that script, you can follow these steps :
+ 
  * move or copy the content of cfg.msh where you want to install the scripts
 
  * copy `cfg.msh/mshrc` to `~/.zshrc` or `~/.bashrc` according to the shell
