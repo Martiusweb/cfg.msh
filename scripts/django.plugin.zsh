@@ -176,19 +176,39 @@ _managepy-validate() {
     $nul_args && ret=0
 }
 
+_managepy-makemessages() {
+  _arguments -s : \
+    '--locale=-[Creates or updates the message files for the given locale (e.g. pt_BR).]' \
+    '--domain=-[The domain of the message files (default: "django").]' \
+    '--all[Updates the message files for all existing locales.]' \
+    '--extension=-[The file extension(s) to examine (default: ".html", separate multiple extensions with commas, or use -e multiple times)]' \
+    '--symlinks[Follows symlinks to directories when examining source code and templates for translation strings.]' \
+    '--ignore=-[Ignore files or directories matching this glob-style pattern. Use multiple times to ignore more.]' \
+    "--no-default-ignore=[Don't ignore the common glob-style patterns 'CVS', '.*' and '*~'.]" \
+    "--no-wrap=[Don't break long message lines into several lines]" \
+    '--no-obsolete=[Remove obsolete message strings]' \
+    $nul_args && ret=0
+}
+
 _managepy-commands() {
   local -a commands
 
   commands=(
-    'adminindex:prints the admin-index template snippet for the given app name(s).'
+    "changepassword:Change a user's password for django.contrib.auth."
+    'cleanup:Can be run as a cronjob or directly to clean out old data from the database (only expired sessions at the moment).'
+    'collectstatic:Collects the static files into STATIC_ROOT.'
+    'compilemessages:Compiles .po files to .mo files for use with builtin gettext support.'
     'createcachetable:creates the table needed to use the SQL cache backend.'
+    'createsuperuser:Used to create a superuser.'
     'dbshell:runs the command-line client for the current DATABASE_ENGINE.'
     "diffsettings:displays differences between the current settings.py and Django's default settings."
     'dumpdata:Output the contents of the database as a fixture of the given format.'
+    'findstatic:Finds the absolute paths for the given static file(s).'
     'flush:Executes ``sqlflush`` on the current database.'
     'help:manage.py help.'
     'inspectdb:Introspects the database tables in the given database and outputs a Django model module.'
     'loaddata:Installs the named fixture(s) in the database.'
+    'makemessages:Runs over the entire source tree of the current directory and pulls out all strings marked for translation.'
     'reset:Executes ``sqlreset`` for the given app(s) in the current database.'
     'runfcgi:Run this project as a fastcgi (or some other protocol supported by flup) application,'
     'runserver:Starts a lightweight Web server for development.'
@@ -208,7 +228,7 @@ _managepy-commands() {
     'testserver:Runs a development server with data from the given fixture(s).'
     'validate:Validates all installed models.'
   )
-  
+
   _describe -t commands 'manage.py command' commands && ret=0
 }
 
