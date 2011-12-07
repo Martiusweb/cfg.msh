@@ -1,5 +1,4 @@
 # This file is part of cfg.msh by Martin Richard
-#
 #            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 #                    Version 2, December 2004
 #
@@ -14,26 +13,14 @@
 #
 #  0. You just DO WHAT THE FUCK YOU WANT TO.
 
-# Path to our configuration
-MSH_CFG_PATH=/home/martius/Code/cfg.msh
+# Aliases and syntactic helpers I use when I work on libre office
+LIBO_SRC_DIR=~/Code/libo
 
-# Uncomment for unsensitive case for autocompletion
-#MSH_CASE_UNSENSITIVE=true
+alias dbuild="build debug=t dbglevel=2"
+alias dbuild1="build debug=t dbglevel=1"
 
-#plugins to load
-MSH_PLUGINS=libo.zsh
+alias prepareMyEnv="source $LIBO_SRC_DIR/Env.Host.sh"
+alias goInstall="cd $LIBO_SRC_DIR/install/program"
+alias sourceInstall="goInstall && source ooenv"
 
-# Starts our configuration
-source $MSH_CFG_PATH/bootstrap
-
-
-# User's configuration: anything here can be customized and specific to an
-# environement
-alias vi='gvim'
-alias :e='gvim'
-alias :q="exit"
-alias py2='python2'
-
-# Export options
-export EDITOR=vim
-export PACMAN=pacman-color
+alias iShallWork="prepareMyEnv && sourceInstall && cd $LIBO_SRC_DIR"

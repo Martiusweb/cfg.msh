@@ -28,4 +28,8 @@ fi
 for script in $MSH_CFG_PATH/scripts/*.$MSH_SHELL; do source $script; done
 unset script
 
+# Load plugins
+for plugin in $MSH_PLUGINS; do source $MSH_CFG_PATH/plugins/$plugin; done
+unset plugin
+
 PATH=$PATH:$MSH_CFG_PATH/bin
