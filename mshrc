@@ -33,3 +33,4 @@ alias py2='python2'
 # Export options
 export EDITOR=vim
 export PACMAN=pacman-color
+export PATH=$PATH:~/.gem/ruby/1.9.1/bin
