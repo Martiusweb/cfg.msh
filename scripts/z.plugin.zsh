@@ -1,5 +1,4 @@
 # This file is part of cfg.msh by Martin Richard
-#
 #            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 #                    Version 2, December 2004
 #
@@ -14,24 +13,7 @@
 #
 #  0. You just DO WHAT THE FUCK YOU WANT TO.
 
-# Path to our configuration
-MSH_CFG_PATH=/home/martius/Code/cfg.msh
-
-# Uncomment for unsensitive case for autocompletion
-#MSH_CASE_UNSENSITIVE=true
-
-# Starts our configuration
-source $MSH_CFG_PATH/bootstrap
-
-# User's configuration: anything here can be customized and specific to an
-# environement
-alias vi='gvim'
-alias :e='gvim'
-alias :q="exit"
-alias py2='python2'
-alias iShallWork="cd ~/Code/jolitv/secam"
-
-# Export options
-export EDITOR=vim
-export PACMAN=pacman-color
-export PATH=$PATH:~/.gem/ruby/1.9.1/bin:/opt/phpctags
+source $MSH_CFG_PATH/plugins/z-zsh/z.sh
+function precmd () {
+    z --add "$(pwd -P)"
+}

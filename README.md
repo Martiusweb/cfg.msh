@@ -20,6 +20,8 @@ If you don't want to use that script, you can follow these steps :
  
  * move or copy the content of cfg.msh where you want to install the scripts
 
+ * execute `git submodule init`
+
  * copy `cfg.msh/mshrc` to `~/.zshrc` or `~/.bashrc` according to the shell
  program you want to use 
 
