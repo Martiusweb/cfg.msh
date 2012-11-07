@@ -29,9 +29,13 @@ alias vi='gvim'
 alias :e='gvim'
 alias :q="exit"
 alias py2='python2'
-alias iShallWork="cd ~/Code/jolitv/secam"
+alias iShallWork="cd ~/Code/mixotv/secam"
+alias sf2="app/console"
+
 
 # Export options
 export EDITOR=vim
 export PACMAN=pacman-color
 export PATH=$PATH:~/.gem/ruby/1.9.1/bin:/opt/phpctags
+
+command fortune 2> /dev/null

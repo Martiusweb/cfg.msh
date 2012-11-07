@@ -1,5 +1,5 @@
 # Symfony2 basic command completion
-SF2_ROOT_DIR=~/Code/jolitv/secam
+SF2_ROOT_DIR=~/Code/mixotv/secam
 
 _symfony2_get_command_list () {
 	php $SF2_ROOT_DIR/app/console --no-ansi | sed "1,/Available commands/d" | awk '/^  [a-z]+/ { print $1 }'
