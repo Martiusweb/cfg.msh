@@ -29,8 +29,6 @@ alias vi='gvim'
 alias :e='gvim'
 alias :q="exit"
 alias py2='python2'
-alias iShallWork="cd ~/Code/mixotv/secam"
-alias sf2="app/console"
 
 source $MSH_CFG_PATH/local_aliases
 
