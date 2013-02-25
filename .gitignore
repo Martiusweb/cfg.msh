@@ -1,3 +1,4 @@
 .*.sw[op]
 *~
 cache/
+local_aliases
