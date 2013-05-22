@@ -22,3 +22,9 @@ git submodule init > /dev/null 2>&1
 git submodule update > /dev/null 2>&1
 echo "ok"
 echo
+
+echo -n "Setup zsh... "
+ln -s /opt/cfg.msh/mshrc ~/.zshrc
+chsh -s `which zsh`
+echo "ok"
+echo
