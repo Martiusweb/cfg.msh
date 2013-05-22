@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This file is part of cfg.msh by Martin Richard
 #            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
@@ -16,3 +16,9 @@
 #  0. You just DO WHAT THE FUCK YOU WANT TO.
 
 git update-index --assume-unchanged local_aliases
+
+echo -n "Fetching submodules... "
+git submodule init > /dev/null 2>&1
+git submodule update > /dev/null 2>&1
+echo "ok"
+echo
