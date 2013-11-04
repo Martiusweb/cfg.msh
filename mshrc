@@ -29,6 +29,7 @@ alias vi='gvim'
 alias :e='gvim'
 alias :q="exit"
 alias py2='python2'
+alias duh='du --max-depth=1 -h'
 
 source $MSH_CFG_PATH/local_aliases
 
