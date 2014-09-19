@@ -1,6 +1,5 @@
-#!/bin/bash
-
 # This file is part of cfg.msh by Martin Richard
+#
 #            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 #                    Version 2, December 2004
 #
@@ -15,17 +14,7 @@
 #
 #  0. You just DO WHAT THE FUCK YOU WANT TO.
 
-git update-index --assume-unchanged local_aliases
+file_path=`realpath $0`
+file_path=`basename $file_path`
 
-echo -n "Fetching submodules... "
-git submodule init > /dev/null 2>&1
-git submodule update > /dev/null 2>&1
-echo "ok"
-echo
-
-echo -n "Setup zsh... "
-ln -s /opt/cfg.msh/mshrc ~/.zshrc
-ln -s /opt/cfg.msh/profile ~/.profile
-chsh -s `which zsh`
-echo "ok"
-echo
+export PATH=$PATH:~/.gem/ruby/1.9.1/bin:/opt/phpctags:$file_path/bin

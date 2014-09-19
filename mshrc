@@ -15,7 +15,14 @@
 #  0. You just DO WHAT THE FUCK YOU WANT TO.
 
 # Path to our configuration
-MSH_CFG_PATH=/home/martius/Code/cfg.msh
+if [ -z "${BASH_SOURCE[0]}" ]
+then
+    me=`readlink ${(%):-%N}`
+else
+    me=`readlink ${BASH_SOURCE[0]}`
+fi
+
+MSH_CFG_PATH="$( cd "$( dirname "$me" )" && pwd )"
 
 # Uncomment for unsensitive case for autocompletion
 #MSH_CASE_UNSENSITIVE=true
@@ -25,17 +32,19 @@ source $MSH_CFG_PATH/bootstrap
 
 # User's configuration: anything here can be customized and specific to an
 # environement
-alias vi='gvim'
-alias :e='gvim'
+vi=`(which gvim || which vim) | tail -1`
+alias vi=$vi
+alias :e=$vi
 alias :q="exit"
 alias py2='python2'
 alias duh='du --max-depth=1 -h'
+alias ß='ssh'
+alias serve='python3 -m http.server'
 
 source $MSH_CFG_PATH/local_aliases
 
 # Export options
 export EDITOR=vim
 export PACMAN=pacman
-export PATH=$PATH:~/.gem/ruby/1.9.1/bin:/opt/phpctags
 
 command fortune 2> /dev/null
