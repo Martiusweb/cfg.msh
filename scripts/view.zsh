@@ -26,10 +26,10 @@ PROMPT='%{$fg[green]%}%n%{$reset_color%}'
 
 if [[ $(hostname -s) != "tumbler" ]]
 then
-    PROMPT="${PROMPT}%{$fg[red]%}@%m%{$reset_color%}"
+ PROMPT="${PROMPT}%{$fg[red]%}@%m%{$reset_color%}"
 fi
 
-PROMPT="$PROMPT %~%{$fg[yellow]%}$(git_prompt_info) %{$fg[red]%}"
+PROMPT="$PROMPT"' %~%{$fg[yellow]%}$(git_prompt_info) %{$fg[red]%}'
 
 if is_root
 then
